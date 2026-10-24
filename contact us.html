@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="uft-8">
+  <meta name="viewport">
+<content="with=device-width,initial-scale=1.0">
+<title>The Elvin Bake House</title>
+<meta name="gideon tech">
+<content=<"provide tech service & product">
+<style>
+
+header{
+      background-color:#ffffff;
+      padding:auto; 
+      align-items:center;
+      justify-content:space-between;
+      display:flex;
+      margin-bottom: 30px;
+      height:150px;
+            }
+
+header img{
+          margin-left:-20px;
+          padding:30px;
+          height:190px;
+          width:270px;
+              }
+
+nav a{
+     
+      color:rgba(184,134,11,2);
+      text-decoration:none;
+      margin-left:20px;
+      font-size:28px;
+      font-weight:bold;
+      font-style:italic;
+      border-right:1px solid #b8860b;
+      padding:0 12px;
+               }
+
+body {
+    background-color:#f5f5f5;
+             }
+
+
+*  {
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+          }
+
+.contact {
+     background-color:red;
+     width:800px;
+     padding:30px;
+     background-color:#ffffff;
+     margin-left:380px;
+     transition:scale(1.1);
+     box-shadow:0 10px 20px
+     rgba(0,0,0,0.3)
+              }
+
+h1,h2,h3,h4   {
+
+                margin-bottom:5px;
+                font-size:30px;
+                color:rgba(184,134,11,2);
+                text-align:center;
+                font-family:arial;
+                       }
+
+
+p   {
+    margin-top:0;
+    font-size:21px;
+    font-family:arial, sans-serif;
+    line-height:1.8;
+    text-align:center;
+       }
+
+ ol   {
+    text-align:center;
+    list-style-position:inside;
+    font-size:21px;
+    font-family:arial,sans-serif;
+    line-height:1.5;
+    dislay:inline-block;
+       }
+
+footer {
+         item-align:center;
+         text-align:center;
+         margin-top:15px;
+                  }
+
+
+
+/* Responsive layout: keeps the existing HTML and adapts it to different screens */
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    min-height: 110px;
+    padding: 12px 20px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+header img {
+    max-width: 100%;
+    width: clamp(120px, 22vw, 220px);
+    height: auto;
+    margin-left: 0;
+    padding: 8px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+nav a {
+    margin: 0;
+    padding: 6px 10px;
+    font-size: clamp(14px, 1.6vw, 22px);
+    border-right: 1px solid #b8860b;
+}
+
+.about,
+.contact {
+    width: min(800px, calc(100% - 32px));
+    max-width: 100%;
+    margin: 0 auto 24px;
+    padding: clamp(16px, 4vw, 30px);
+}
+
+.images {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    padding: clamp(12px, 3vw, 30px);
+}
+
+.container {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: clamp(12px, 3vw, 30px);
+}
+
+.food {
+    min-width: 0;
+}
+
+.product {
+    min-width: 0;
+}
+
+.product img {
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.img {
+    width: 100%;
+}
+
+.img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 850px;
+    object-fit: cover;
+}
+
+h1, h2, h3, h4 {
+    font-size: clamp(21px, 2.4vw, 30px);
+}
+
+p, li {
+    font-size: clamp(16px, 1.6vw, 21px);
+}
+
+footer {
+    text-align: center;
+    padding: 12px;
+}
+
+footer img {
+    width: auto;
+    max-width: 55px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .images {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .food {
+        flex: 1 1 220px;
+    }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        margin-bottom: 18px;
+    }
+
+    header img {
+        width: 150px;
+        max-height: 110px;
+    }
+
+    nav {
+        width: 100%;
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 15px;
+        padding: 6px 7px;
+        margin: 0;
+    }
+
+    .about,
+    .contact {
+        width: calc(100% - 20px);
+        margin: 0 auto 18px;
+        padding: 16px 12px;
+    }
+
+    .images {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        padding: 12px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .food {
+        width: 100%;
+        flex: 1 1 auto;
+        padding: 20px 12px;
+    }
+
+    .img img {
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    h1, h2, h3, h4 {
+        font-size: 22px;
+    }
+
+    p, li {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    footer img {
+        max-width: 45px;
+        height: 40px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+
+
+<header>
+
+<img src="logo.png"  alt="logo">
+
+ <nav>
+
+      <a href="index.html">home</a>
+      <a href="menu.html">Menu</a>
+      <a href="order online.html">Order Online</a>
+      <a href="about us.html">About Us</a>
+  </nav>
+
+</header>
+
+
+<div class="contact">
+<h1>Contact us</h1>
+<h2>We'd love to hear from you</h2>
+
+<p>If you have any quastion or would like to discuss a project<br>
+   please get in touch.our team is ready to help.</p>
+
+      <ol>
+
+          <li><b>Office address</b>:blantyre,malawi.</li>
+          <li><b>Phone</b>:+265 883 677 885.</li>
+          <li><b>Email</b>:Bakehouse Elvin0@gamil.com.</li>
+          <li><b>Website</b>:www.The Elvin Bake House.com.</li>
+          <li><b>Business hours</b>:monday-sunday:7:30AM-5:00PM</li>
+
+       </ol>
+
+
+<h3>Why contact us</h3>
+
+      <ol>
+
+          <li>Get professional advice.</li>
+          <li>Request a free consultation or quotantion.</li>
+          <li>Ask about our product and service.</li>
+          <li>Receive fast and friendly customer support.</li>
+          <li>Share your feedback and suggestions.</li>
+
+       </ol>
+
+<h4>Our commitment</h4>
+<p>We value every customer and aim to respond to all enquiries<br>
+   as quickly as possible.Your satisfaction is our priority and<br>
+   we are committed to providing realible,professional and high<br>
+   quality service.</p>
+
+<p><b>call us or email We look forward to hearing from you.</b></p>
+      
+
+</div>
+
+
+<footer>
+
+<img src="instagram.jpg"  alt="instagram "title="contact us on instagram" height="45px" width="55px">
+
+<a href="https://www.facebook.com/61593652000856/posts/122111298015455066/?app=fbl">
+<img src="face.jpeg" alt="facebook" title="contact us on facebook" height="45px" width="55px">
+</a>
+
+<img src="twitter.jpeg"  alt="instagram "title="contact us on twitter" height="45px" width="45px">
+
+<p>&#169;2026 The elvin bake house&#8482; all rights reserved</p>
+
+</footer>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
